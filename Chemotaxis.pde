@@ -1,4 +1,4 @@
-Mover moverHolder[] = new Mover[10];
+Bacteria BacteriaHolder[] = new Bacteria[10];
 
 void setup(){
 	size(500,500);
@@ -6,7 +6,7 @@ void setup(){
 	background(0,0,0);
 }
 
-public class Mover{
+public class Bacteria{
 	int x;
 	int y;
 	int newPointX;
@@ -14,7 +14,7 @@ public class Mover{
 	int speed;
 	int direction;
 	int rgb[] =  new int[3];
-	Mover(){
+	Bacteria(){
 		x=(int) (Math.random()*width);
 		y=(int) (Math.random()*height);
 		newPointX = x + (int) (Math.random()*101 -50);
@@ -49,13 +49,13 @@ public class Mover{
 	}
 }
 void build(){
-	for(int i = 0; i<moverHolder.length-1;i++){
-		moverHolder[i] = new Mover();
+	for(int i = 0; i<BacteriaHolder.length-1;i++){
+		BacteriaHolder[i] = new Bacteria();
 	}
 }
 
 void draw(){
-	for(int i = 0; i<moverHolder.length-1;i++){
-		moverHolder[i].move();
+	for(int i = 0; i<BacteriaHolder.length-1;i++){
+		BacteriaHolder[i].move();
 	}
 }
