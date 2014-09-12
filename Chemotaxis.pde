@@ -32,16 +32,26 @@ public class Bacteria{
 			direction = (int) (Math.random()*21 -10);
 		}
 		if(direction>0){
-			if(newPointX>x){
+			if(newPointX>x && x+1<= 500){
 				x+=1;
-			} else{
+			} else if(x-1>=0){
 				x-=1;
+			} else {
+				newPointX = x + (int) (Math.random()*101 -50);
+				newPointY = y + (int) (Math.random()*101 -50);
+				direction = (int) (Math.random()*21 -10);
+				move();
 			}
 		} else {
-			if(newPointY>y){
+			if(newPointY>y && y+1<= 500)){
 				y+=1;
-			} else{
+			} else if(y-1>=0){
 				y-=1;
+			} else {
+				newPointX = x + (int) (Math.random()*101 -50);
+				newPointY = y + (int) (Math.random()*101 -50);
+				direction = (int) (Math.random()*21 -10);
+				move();
 			}
 		}
 		stroke(rgb[0],rgb[1], rgb[2]);
