@@ -67,7 +67,7 @@ void build(){
 
 void draw(){
   fill(0,0,0,40);
-  rect(0 ,0 , 1000, 1000);
+  rect(-10 ,-10 , 1000, 1000);
   for(int i = 0; i<BacteriaHolder.length-1;i++){
     BacteriaHolder[i].move();
   }
